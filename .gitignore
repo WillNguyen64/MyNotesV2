@@ -231,6 +231,12 @@ fabric.properties
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
 
-# others
-MyNotesV2.iml
+## Stuff I added
 
+# IDEA Java project files
+*.iml
+.idea
+
+# Mill-specific IDE and build artifacts
+.idea_modules
+out
