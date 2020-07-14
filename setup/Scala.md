@@ -1,6 +1,10 @@
 
 # Setup Scala
 
+## Install Ammonite
+
+https://ammonite.io/
+
 ## Setup Scala Project using Mill
 
 ```bash

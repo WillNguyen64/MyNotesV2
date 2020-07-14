@@ -14,7 +14,7 @@ MILL_VERSION="0.7.3"
 EXAMPLE_PKG="example-3"
 EXAMPLE_PROJECT="foo"
 ZIPFILE="${EXAMPLE_PKG}.zip"
-MILL_EXEC="mill"
+MILL_EXEC="./mill"
 BUILD_SC="build.sc"
 
 # Validate parameters
@@ -47,3 +47,6 @@ echo "Setting the project name in project files"
 mv $EXAMPLE_PROJECT "$PROJECT_NAME"
 sed -i "" -e "s/object $EXAMPLE_PROJECT/object $PROJECT_NAME/" "$BUILD_SC"
 find "$PROJECT_NAME" -type f -name "*.scala" -exec sed -i "" -e "s/package $EXAMPLE_PROJECT/package $PROJECT_NAME/" {} \;
+
+echo "Generate IntelliJ files"
+$MILL_EXEC mill.scalalib.GenIdea/idea
