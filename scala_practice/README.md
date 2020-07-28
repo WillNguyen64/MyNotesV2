@@ -5,3 +5,5 @@ This project contains Scala code for learning and practice. It contains examples
 ## Build
 [See Scala.md file for details](../setup/Scala.md)
 
+## Scripts
+Run: `amm <script>`, e.g., `amm BasicImport.sc`
