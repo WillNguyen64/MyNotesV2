@@ -5,7 +5,8 @@ import org.scalatest.flatspec.AnyFlatSpec
 
 import scala.collection.mutable.ListBuffer
 
-/* ===== Scenario 3b: Run fixture code before/after, this does not abort suite if fixture fails  ===== */
+/* ===== Scenario 3b: Run fixture code before/after test using trait mixins
+         this does not abort suite if fixture fails  ===== */
 
 // This code allows mixing in multiple fixtures (via traits) that are initialized before each test and
 // cleaned up afterwards.  Can change the initialization order by changing order in which traits are mixed.
@@ -14,7 +15,9 @@ import scala.collection.mutable.ListBuffer
 // for the fix: https://stackoverflow.com/questions/28845975/better-way-to-compose-test-fixtures-in-scalatest
 
 trait Builder3b extends TestSuiteMixin { this: TestSuite =>
-  // TODO: what does the "this:Suite =>" part do?
+  // What does the "this:Suite =>" part do?
+  // This marks the traits so they can only be used by subclasses of the "Suite" type
+  // See: https://alvinalexander.com/scala/scala-trait-examples/
   val builder = new StringBuilder
 
   abstract override def withFixture(test: NoArgTest): Outcome = {
@@ -37,8 +40,6 @@ trait Buffer3b extends TestSuiteMixin { this: TestSuite =>
 
 
 class FixturesTestSpec3b extends AnyFlatSpec with Builder3b with Buffer3b {
-
-  /* ===== Scenario 3: Abort suite (not test) if fixture fails ===== */
 
   "Testing" should "be easy" in {
     builder.append("easy!")

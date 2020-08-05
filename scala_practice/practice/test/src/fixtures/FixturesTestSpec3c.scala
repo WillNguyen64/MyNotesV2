@@ -5,12 +5,12 @@ import org.scalatest.flatspec.AnyFlatSpec
 
 import scala.collection.mutable.ListBuffer
 
-/* ===== Scenario 3c: Run fixture code before/after and abort suite (not test) if fixture fails ===== */
+/* ===== Scenario 3c: Run fixture code before/after test using trait mixins
+         and abort suite (not test) if fixture fails ===== */
 
 // Another way to create stackable fixture traits
 
 trait Builder3c extends BeforeAndAfterEach { this: TestSuite =>
-  // TODO: what does the "this:Suite =>" part do?
   val builder = new StringBuilder
 
   override def beforeEach(): Unit = {

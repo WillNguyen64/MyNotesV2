@@ -49,7 +49,7 @@
     
 ## Writing Tests
 
-Techniques to avoid test code duplication
+Sharing fixtures across different tests
 
 * Scenario 1 - Diff tests need diff fixtures
     * `get-fixture` methods - use to create diff fixture objs for tests, no cleanup
@@ -61,3 +61,8 @@ Techniques to avoid test code duplication
 * Scenario 3 - Run fixture code before/after and abort suite (not test) if fixture fails
     * `BeforeAndAfter` - Perform side effects before/after each test
     * `BeforeAndAfterEach` - Put each fixture into a trait that can be composed, allows diff tests to use fixtures in diff combinations, and maybe initialed/cleaned up in diff order
+
+Sharing tests across different fixtures
+
+Define tests are factored out into a "behavior functions" that get run multiple times, for each fixture. e.g., Run same tests when a stack is empty, full or has one item less than capacity.
+
