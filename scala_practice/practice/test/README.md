@@ -66,3 +66,16 @@ Sharing tests across different fixtures
 
 Define tests are factored out into a "behavior functions" that get run multiple times, for each fixture. e.g., Run same tests when a stack is empty, full or has one item less than capacity.
 
+## Writing Mocks
+
+How to choose between Expectations-First (mock) and Record-Then-Verify (stub) mocking styles
+* mock objects for which you have strict expectations
+* stub objects for which you don't have strict expectations, e.g., b/c you prefer to make tests more independent to trait implementation changes
+
+How to share mocks
+There are to approaches to sharing mocks across tests:
+* Isolated test cases
+  * Mix `OneInstancePerTest` trait into `Suite` so that each test case runs in its own instance of the suite class
+* Fixture contexts
+  * Fixture context contains shared mocks and expectations, can extend and combine contexts
+  * Each test case uses a different instance of the fixture context

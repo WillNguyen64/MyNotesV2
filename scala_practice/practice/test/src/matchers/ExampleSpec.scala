@@ -27,13 +27,13 @@ class ExampleSpecs extends AnyFlatSpec with Matchers {
     "Hi" should equal ("hi") (after being lowerCased and trimmed)
   }
 
-  "Matchers" should "check for length and size" in {
+  it should "check for length and size" in {
     val result = List(1,2,3)
     result should have length 3
     result should have size 3
   }
 
-  "Matchers" should "check for substring patterns" in {
+  it should "check for substring patterns" in {
     val string = "Hello world"
     string should startWith ("Hello")
     string should endWith ("world")
@@ -48,7 +48,7 @@ class ExampleSpecs extends AnyFlatSpec with Matchers {
     "abbccxxx" should startWith regex ("a(b*)(c*)" withGroups("bb", "cc"))
   }
 
-  "Matchers" should "check for greater and less than" in {
+  it should "check for greater and less than" in {
     val one  = 1
     one should be < 7
     one should be > 0
@@ -56,18 +56,18 @@ class ExampleSpecs extends AnyFlatSpec with Matchers {
     one should be >= 0
   }
 
-  "Matchers" should "check for boolean properties with be" in {
+  it should "check for boolean properties with be" in {
     val result = new File("/tmp")
     result should be a 'directory
   }
 
-  "Matchers" should "check two references refer to exact same object" in {
+  it should "check two references refer to exact same object" in {
     val result = "abc"
     val result2 = result
     result should be theSameInstanceAs result2
   }
 
-  "Matchers" should "check an object is an instance of a class or trait" in {
+  it should "check an object is an instance of a class or trait" in {
     val result = 1
     result shouldBe an [Int]
     result should not be a [String]
@@ -76,12 +76,12 @@ class ExampleSpecs extends AnyFlatSpec with Matchers {
     result2 shouldBe a [List[_]]
   }
 
-  "Matchers" should "check for numbers in a range" in {
+  it should "check for numbers in a range" in {
     val result = 7.0
     result should equal (6.9 +- 0.2)
   }
 
-  "Matchers" should "work with containers" in {
+  it should "work with containers" in {
     val emptyList = List.empty
     val list = List("one", "two", "three")
     val list2 = List("one", "two", "one", "one", "three")
@@ -102,7 +102,7 @@ class ExampleSpecs extends AnyFlatSpec with Matchers {
     List(1, 2, 3) shouldBe sorted
   }
 
-  "Matchers" should "check arbitrary properties" in {
+  it should "check arbitrary properties" in {
     case class Book(title: String, author: List[String], pubYear: Int)
     val book = Book("Programming in Scala", List("Odersky", "Spoon", "Venners"), 2008)
     book should have (

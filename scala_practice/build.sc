@@ -8,7 +8,9 @@ object practice extends ScalaModule{
     //def ivyDeps = Agg(ivy"com.lihaoyi::utest:0.7.4")
     //def testFrameworks = Seq("utest.runner.Framework")
     // Scalatest example
-    def ivyDeps = Agg(ivy"org.scalatest::scalatest:3.2.0")
+    def ivyDeps = Agg(
+      ivy"org.scalatest::scalatest:3.2.0",
+      ivy"org.scalamock::scalamock:5.0.0")
     def testFrameworks = Seq("org.scalatest.tools.Framework")
   }
 }
