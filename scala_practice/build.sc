@@ -3,6 +3,10 @@ import mill._, scalalib._
 
 object practice extends ScalaModule{
   def scalaVersion = "2.13.2"
+  def ivyDeps = Agg(
+    ivy"ch.qos.logback:logback-classic:1.2.3",
+    ivy"com.typesafe.scala-logging::scala-logging:3.9.2"
+  )
   object test extends Tests{
     // utest example
     //def ivyDeps = Agg(ivy"com.lihaoyi::utest:0.7.4")
