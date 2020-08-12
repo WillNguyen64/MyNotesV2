@@ -14,6 +14,7 @@ trait Log {
 }
 
 object AdapterExample extends App {
+  // Uses FinalAppLoggerImplicit to convert FinalLogger to Log
   val logger: Log = new FinalLogger
   logger.info("This is an info message")
   logger.debug("Debug something here.")
