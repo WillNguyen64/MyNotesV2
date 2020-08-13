@@ -6,7 +6,9 @@ object practice extends ScalaModule{
   def ivyDeps = Agg(
     ivy"ch.qos.logback:logback-classic:1.2.3",
     ivy"com.typesafe.scala-logging::scala-logging:3.9.2",
-    ivy"commons-codec:commons-codec:1.14"
+    ivy"commons-codec:commons-codec:1.14",
+    ivy"com.github.tototoshi::scala-csv:1.3.6",
+    ivy"org.json4s::json4s-native:3.6.9"
   )
   object test extends Tests{
     // utest example
