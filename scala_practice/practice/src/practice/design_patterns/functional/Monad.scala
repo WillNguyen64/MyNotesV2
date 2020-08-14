@@ -10,8 +10,9 @@ import scala.io.Source
 
 // Examples of built-in Scala Monads: List, Array, Option, etc.
 
-// Monads allow you to compose multiple operations using map, unit, and flatMap methods.
-// e.g., You can use for comprehensions with Monads.
+// Monads allow you to create complex computations using map, flatMap and for comprehensions. It builds up computations
+// and only executes until the last moment.
+// e.g.,
 //    val l1 = List(1, 2, 3, 4)
 //    val l2 = List(5, 6, 7, 8)
 //    val result = for {

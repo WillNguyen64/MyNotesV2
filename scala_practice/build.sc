@@ -8,7 +8,9 @@ object practice extends ScalaModule{
     ivy"com.typesafe.scala-logging::scala-logging:3.9.2",
     ivy"commons-codec:commons-codec:1.14",
     ivy"com.github.tototoshi::scala-csv:1.3.6",
-    ivy"org.json4s::json4s-native:3.6.9"
+    ivy"org.json4s::json4s-native:3.6.9",
+    ivy"org.scalaz::scalaz-core:7.3.2",
+    ivy"com.h2database:h2:1.4.192"
   )
   object test extends Tests{
     // utest example
