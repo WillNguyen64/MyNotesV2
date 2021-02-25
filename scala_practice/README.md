@@ -1,9 +1,11 @@
 
 # Scala Practice
-This project contains Scala code for learning and practice. It contains examples from the Hands-On Scala Programming book, and other resources.
+This project contains Scala code for learning and practice. It contains examples from the following books:
+* Hands-On Scala Programming book
 
-## Build
-[See Scala.md file for details](../setup/Scala.md)
+## Setup Build Tools
+* [Install Ammonite](./docs/Ammonite.md)
+* [Install Mill](./docs/Mill.md)
 
-## Scripts
+## Running Examples
 Run: `amm <script>`, e.g., `amm BasicImport.sc`

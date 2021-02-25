@@ -1,4 +1,12 @@
 
+# Practiced
+* Testing
+  * pytest
+* Profiling
+  * CProfile
+  * Timeit
+
+# Not Practiced
 * Versioning:
   * PEP 440
 * Style errors
@@ -15,30 +23,6 @@
   * Import module w/ unknown name: random = __import__("RANDOM".lower())
   * List of modules imported: sys.modules['os'], etc..
   * List of built-in modules: sys.builtin_module_names
-* Standard library
-  * CLIs
-    * argparse - CLI arg parsing, alternative: click
-  * data processing
-    * codecs - encode/decode data
-    * copy - copy data  
-  * data structures / algorithms
-    * abc - abstract base classes (https://pymotw.com/3/abc/)
-    * bisect - bisection algorithms for sorting
-    * collections - useful data structures
-  * date/time
-    * calendar - date-related funcs
-    * datetime - handle dates/times  
-  * managing files
-    * fnmatch - matching Unix-style filename patterns
-    * glob - matching Unix-style path patterns
-    * io - handle I/O streams, use StringIO to treat strings as files
-    * shutil - 
-    * tempfile - create temp files/dirs
-  * async processing
-    * concurrent - async compute
-    * multiprocessing - run subprocesses with thread-like API
-    * sched - event scheduler w/o using multithreading
-    * threading - high-level therading
 * Package Installation
   * Install a package w/o copying package's files
     * Use case: install a package that you're actively working on
