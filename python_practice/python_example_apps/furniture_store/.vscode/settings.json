@@ -1,0 +1,12 @@
+{
+    "python.pythonPath": "c:\\Users\\Dhalsim\\Documents\\VSCodeProjects\\MyNotesV2\\python_practice\\python_example_apps\\furniture_store\\.venv\\Scripts\\python.exe",
+    "python.linting.mypyEnabled": true,
+    "python.linting.enabled": true,
+    "python.linting.flake8Enabled": false,
+    "python.testing.pytestArgs": [
+        "tests"
+    ],
+    "python.testing.unittestEnabled": false,
+    "python.testing.nosetestsEnabled": false,
+    "python.testing.pytestEnabled": true
+}
